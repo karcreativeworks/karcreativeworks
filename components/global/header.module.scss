@@ -1,0 +1,303 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: fixed;
+	background: $white;
+	box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.08);
+	padding: 0px 25px;
+	z-index: 1000;
+}
+
+.header > div {
+	//flex: 1;
+}
+
+.logo_icon {
+	display: block;
+	background: url("/logo_favicon.svg");
+	width: 4rem;
+	height: 4rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.menu_icon{
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 30px 0;
+}
+
+.menu{
+	background: url("/icons/sidebar_menu_icon.svg");
+	background-position: center;
+	background-size: cover;
+}
+
+.close{
+	background: url("/icons/icon_close.svg");
+	background-position: center;
+	background-size: cover;
+}
+
+.logo_font {
+	font-family: "Abril Fatface", cursive;
+	font-size: 20px;
+	font-weight: 400;
+	color: $black !important;
+	display: flex;
+	align-items: center;
+	text-decoration: none !important;
+	padding: 20px 0;
+}
+
+.buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.buttons > *{
+	margin: 0 20px;
+}
+
+.button_font {
+	cursor: pointer;
+	font-family: "Raleway", cursive;
+	font-size: 16px;
+	font-weight: 500;
+	color: $black;
+	display: flex;
+	align-items: center;
+	text-decoration: none !important;
+	padding: 0 10px;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.33s ease;
+}
+
+.button_font:hover,
+.button_font:focus {
+	color: $grey;
+}
+
+.button_font.active {
+	//border-bottom: 2px solid $black;
+}
+
+.icon_arrow{
+	min-width: 1.5em;
+	min-height: 1.5em;
+	transform: rotate(180deg);
+	transition: transform 0.33s ease;
+	background: url("/icons/up.svg");
+	background-size: cover;
+	background-position: center;
+}
+
+.button_font.active .icon_arrow{
+	transform: rotate(0deg);
+}
+
+.popup_box{
+	margin-top: 20px !important;
+}
+
+.vert_list{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 14px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+
+.vert_list a{
+	transition: border 0.11s ease;
+	padding: 15px 20px;
+	border-left: 0px solid $black;
+	border-right: 5px solid transparent;
+	text-decoration: none !important;
+	outline: none !important;
+	color: $mid-grey;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.vert_list a:hover{
+	color: $black;
+	background: $white;
+	border-left: 5px solid $black;
+	border-right: 0px solid transparent;
+}
+
+.icon_explore{
+	background: url("/icons/shuffle.svg");
+	filter: $f-grey;
+}
+
+.icon_ext{
+	background: url("/icons/extension.svg");
+	filter: $f-grey;
+}
+
+.icon_embed{
+	background: url("/icons/embed.svg");
+	filter: $f-grey;
+}
+
+.icon_verify{
+	background: url("/icons/verified_checker.svg");
+	filter: $f-grey;
+}
+
+.icon_doc{
+	background: url("/icons/book.svg");
+	filter: $f-grey;
+}
+
+.icon_scan{
+	background: url("/icons/center_focus.svg");
+	filter: $f-grey;
+}
+
+.icon_regulations{
+	background: url("/icons/article.svg");
+	filter: $f-grey;
+}
+
+.icon_twitter{
+	background: url("/icons/twitter.svg");
+	filter: $f-grey;
+}
+
+.icon_gitcoin{
+	background: url("/icons/gitcoin.svg");
+	filter: $f-grey;
+}
+
+.icon_github{
+	background: url("/icons/github.svg");
+	filter: $f-grey;
+}
+
+.icon_reddit{
+	background: url("/icons/reddit.svg");
+	filter: $f-grey;
+}
+
+.icon_discord{
+	background: url("/icons/discord.svg");
+	filter: $f-grey;
+}
+
+.icon_how{
+	background: url("/icons/tips_and_updates.svg");
+	filter: $f-grey;
+}
+
+.icon_dao{
+	background: url("/icons/donut.svg");
+	filter: $f-grey;
+}
+
+.icon_help{
+	background: url("/icons/help_black.svg");
+	filter: $f-grey;
+}
+
+.icon_intro{
+	background: url("/icons/subject.svg");
+	filter: $f-grey;
+}
+
+.icon_use{
+	background: url("/icons/subject.svg");
+	filter: $f-grey;
+}
+
+.hover_color:hover .icon{
+	filter: unset;
+}
+
+.icon{
+	margin-left: 20px;
+	min-width: 1.3em;
+	min-height: 1.3em;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+/* SMALL SCREENS */
+
+@media only screen and (max-width: 767.98px) {
+	.logo_icon {
+		//width: 2.5rem;
+		//height: 2.5rem;
+	}
+
+	.logo_font{
+		opacity: 0;
+		width: 100px;
+		padding: 10px 0;
+	}
+
+	.logo_font.active{
+		opacity: 1;
+		width: unset;
+	}
+
+	.header{
+		align-items: flex-start;
+	}
+
+	.buttons{
+		display: none;
+		margin: 20px 0 30px 0;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.buttons.active{
+		display: flex;
+	}
+
+	.button_font {
+		margin: 10px 4px;
+	}
+}
+
+/* MEDIUM SCREENS */
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+
+	.logo_font{
+		padding: 10px 0;
+	}
+
+	.header{
+		align-items: flex-start;
+	}
+
+	.buttons{
+		display: none;
+		margin: 20px 20px 30px 0;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-left: auto;
+	}
+
+	.buttons.active{
+		display: flex;
+	}
+
+	.button_font {
+		margin: 10px 4px;
+	}
+}

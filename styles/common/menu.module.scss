@@ -1,0 +1,210 @@
+.vert_menu{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	max-height: 300px; 
+	overflow-y: scroll;
+}
+
+.vertmenu_link {
+	color: $dark-grey;
+	font-family: 'Roboto', sans-serif;
+  	font-size: 12.5px;
+  	font-weight: 500;
+  	text-align: left;
+  	padding: 0.5rem 3rem 0.5rem 0.5rem;
+  	cursor: pointer;
+  	display:  flex;
+  	align-items: center;
+  	justify-content: flex-start;
+  	text-align: left;
+}
+
+.vertmenu_link:hover, .vertmenu_link:focus, .vertmenu_link:active, .vertmenu_link.active {
+	color: $black;
+	outline: none;
+	text-decoration: none;
+	background-color: $white-8;
+}
+
+.vertmenu_link img{
+	display: block;
+	opacity: 0;
+	object-fit: cover;
+	object-position: center;
+	width: 14px;
+	height: 14px;
+	margin-right: 0.25rem;
+}
+
+.vertmenu_link.active img{
+	opacity: 1;
+}
+
+.vertmenu_link.right{
+	padding: 0.5rem 0.5rem 0.5rem 3rem;
+	text-align: right;
+  	justify-content: flex-end;
+}
+
+.vertmenu_link.right img{
+	margin-right: 0rem;
+	margin-left: 0.25rem;
+}
+
+.vertmenu_link.image img{
+	opacity: 1;
+}
+
+.vertmenu_mini{
+	color: $mid-grey;
+	font-family: 'Roboto', sans-serif;
+  	font-size: 12px;
+  	font-weight: 700;
+  	text-align: center;
+  	padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  	cursor: pointer;
+  	display:  flex;
+  	align-items: center;
+  	justify-content: center;
+  	border-radius: 1rem;
+}
+
+.vertmenu_mini:hover, .vertmenu_mini:focus, .vertmenu_mini:active{
+	color: $black-9;
+	background: $white-8;
+	outline: none;
+	text-decoration: none;
+}
+
+.vertmenu_mini.active {
+	color: $primary-color;
+	outline: none;
+	text-decoration: none;
+}
+
+.grid_menu{
+	min-width: 450px;
+	max-width: 450px;
+	margin-left: 0;
+	margin-right: 0;
+	max-height: unset;
+	overflow-y: scroll;
+}
+
+.grid_menu::-webkit-scrollbar {
+	display: block;
+  	width: 4px;
+  	margin-right: 6px;
+}
+
+.grid_menu::-webkit-scrollbar-track {
+	display: block;
+  background: $white-8;
+}
+
+.grid_menu::-webkit-scrollbar-thumb {
+	display: block;
+  background: $dark-grey;
+}
+
+.grid_menu::-webkit-scrollbar-thumb:hover {
+	display: block;
+  background: $dark-grey;
+}
+
+.gridmenu_link {
+	color: $dark-grey;
+	font-family: 'Roboto', sans-serif;
+  	font-size: 13px;
+  	line-height: 22px;
+  	font-weight: 400;
+  	text-align: left;
+  	padding: 5px 10px;
+  	cursor: pointer;
+  	display:  flex;
+  	align-items: center;
+  	justify-content: flex-start;
+}
+
+.gridmenu_link:hover, .gridmenu_link:focus, .gridmenu_link:active {
+	color: $black;
+	outline: none;
+	text-decoration: none;
+  	font-weight: 600;
+}
+
+.gridmenu_link.active{
+	color: $black;
+	outline: none;
+	text-decoration: none;
+	font-size: 15px;
+  	font-weight: 600;
+}
+
+.gridmenu_link img{
+	display: block;
+	opacity: 0;
+	object-fit: cover;
+	object-position: center;
+	width: 14px;
+	height: 14px;
+	margin-right: 0.25rem;
+}
+
+.gridmenu_link.active img{
+	opacity: 1;
+}
+
+/* SMALL SCREENS */
+
+@media only screen and (max-width: 767.98px)  {
+
+	.vertmenu_link{
+		font-size: 12px;
+		padding: 0.5rem 2rem 0.5rem 0.5rem;
+	}
+
+	.vertmenu_link.right{
+		font-size: 12px;
+		padding: 0.5rem 0.5rem 0.5rem 2rem;
+	}
+
+
+	.grid_menu{
+		min-width: 200px;
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	.gridmenu_link{
+		padding: 5px 5px;
+	}
+
+}
+
+/* MEDIUM SCREENS */
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+
+	.grid_menu{
+		min-width: 200px;
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+}
+
+/* LARGE SCREENS */
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+
+	.grid_menu{
+		min-width: 300px;
+		max-width: 300px;
+		max-height: 200px;
+	}
+
+}
+

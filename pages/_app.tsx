@@ -16,6 +16,7 @@ function Layout(props: any) {
     <div>
       {props.header && <MetaHead header={props.header} />}
       <main className={`wrapper`}>
+        <Header />
         <PageLoader loading={loading} color="primary" />
         {props.children}
         {props.footer && <Footer />}

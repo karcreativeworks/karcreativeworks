@@ -15,13 +15,9 @@ export const useImageFade = () => {
   });
   return {
     style,
-    onLoad: (evt: SyntheticEvent<HTMLImageElement, Event>) => {
-      console.log(evt);
+    onLoad: () => {
       setStyle({ opacity: 1, transition: "opacity 0.33s ease" });
-    },
-    complete: () => {
-      console.log("complete");
-    },
+    }
   };
 };
 

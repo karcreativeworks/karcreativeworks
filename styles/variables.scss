@@ -11,8 +11,6 @@ $light-green: $accent-color;
 $primary-filter: invert(50%) sepia(69%) saturate(5416%) hue-rotate(338deg) brightness(101%) contrast(105%);
 
 /*THEME COLORS FOR LIGHT MODE*/
-
-/*
 $white: #FFFFFF;
 $white-11: #F9F9F9;
 $white-10: #F5F5F5;
@@ -26,58 +24,12 @@ $black-7: #5B5B5B;
 $dark-grey: #505050;
 $mid-grey: #808080;
 $light-grey: #C4C4C4;
-*/
-
-/* Note that material ui custom css files need to be changed maually 
-(rangeslider.css, playseek.css, volume.css)*/
-
-/*THEME COLORS FOR DARK MODE*/
-
-$white: #000000;
-$white-11: #141414;
-$white-10: #1f1f1f;
-$white-9: #252525;
-$white-8: #303030;
-$white-7: #5b5b5b;
-$black: #ffffff;
-$black-9: #f5f5f5;
-$black-8: #e5e5e5;
-$black-7: #d7d7d7;
-$dark-grey: #c4c4c4;
-$mid-grey-2: #a8a8a8;
-$mid-grey: #808080;
-$light-grey: #505050;
-
-/* Since the naming of attributes are defaulted to light mode, 
-it might be a little confusing since all colors are inverted*/
-
-/* Note that material ui custom css files need to be changed maually 
-(rangeslider.css, playseek.css, volume.css)*/
-
-$header-height: 70px;
-$header-sm-height: 56px;
-$sub-header-height: 38px;
-$col1-width: 35%;
-$col2-width: 60%;
-$col1-md-width: 35%;
-$col2-md-width: 65%;
-
-$sidebar-width: 13%;
-$sidebar-open-offset: 6%;
-$sidebar-close-offset: 0.5%;
-$sidebar-close-lg-offset: 3%;
-$sidebar-close-md-offset: 5%;
-
-$player-sm-height: 140px;
-$player-md-height: 120px;
-$player-height: 100px;
 
 //unsused
 $margin: 4%;
 $md-margin: 10%;
 
-
-/* PLAYER COLORS */
+/* COLORS */
 $red: #FF1744;
 $orange: #FF5722;
 $yellow: #F9D82C;
@@ -115,9 +67,3 @@ $d-pink: #990e3f;
 $d-skin: #7a4b21;
 $d-green: #00733b;
 $d-grey: #505050;
-
-:export {
-	primary-color: $primary-color;
-	secondary-color: $primary-color;
-	accent-color: $accent-color;
-}

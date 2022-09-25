@@ -5,21 +5,31 @@
 	left: 0;
 	right: 0;
 	top: 0;
-	position: fixed;
-	background: $white;
-	box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.08);
+	position: absolute;
+		background: rgba($color: var(--secondary-color), $alpha: 0.8);
+		//box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
 	padding: 0px 25px;
 	z-index: 1000;
+	animation: menubaranimation 0.5s ease-out 2s 1 normal;
+	animation-fill-mode: both;
 }
-
-.header > div {
-	//flex: 1;
-}
+  
+  @keyframes menubaranimation {
+	from {
+	  transform: translateY(-25px);
+	  opacity: 0;
+	}
+  
+	to {
+	  transform: translateY(0px);
+	  opacity: 1;
+	}
+  }
 
 .logo_icon {
 	display: block;
-	background: url("/logo_favicon.svg");
-	width: 4rem;
+	background: url("/logo_plain.png");
+		width: 8rem;
 	height: 4rem;
 	background-position: center;
 	background-size: cover;
@@ -70,7 +80,7 @@
 	font-family: "Raleway", cursive;
 	font-size: 16px;
 	font-weight: 500;
-	color: $black;
+	color: $white;
 	display: flex;
 	align-items: center;
 	text-decoration: none !important;
@@ -89,13 +99,9 @@
 }
 
 .icon_arrow{
-	min-width: 1.5em;
-	min-height: 1.5em;
 	transform: rotate(180deg);
 	transition: transform 0.33s ease;
 	background: url("/icons/up.svg");
-	background-size: cover;
-	background-position: center;
 }
 
 .button_font.active .icon_arrow{
@@ -129,7 +135,7 @@
 }
 
 .vert_list a:hover{
-	color: $black;
+	color: $white;
 	background: $white;
 	border-left: 5px solid $black;
 	border-right: 0px solid transparent;
@@ -238,14 +244,12 @@
 
 @media only screen and (max-width: 767.98px) {
 	.logo_icon {
-		//width: 2.5rem;
-		//height: 2.5rem;
+		width: 5rem;
+		height: 2.5rem;
 	}
 
 	.logo_font{
-		opacity: 0;
-		width: 100px;
-		padding: 10px 0;
+		//padding: 10px 0;
 	}
 
 	.logo_font.active{
@@ -259,7 +263,7 @@
 
 	.buttons{
 		display: none;
-		margin: 20px 0 30px 0;
+		margin: 20px -70px 30px 0;
 		flex-direction: column;
 		align-items: flex-end;
 	}

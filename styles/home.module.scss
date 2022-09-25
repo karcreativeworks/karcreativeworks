@@ -1,13 +1,13 @@
 .container {
   display: block;
-  background-color: #020223;
 }
 
-.top_screen {
+.section_top {
   display: flex;
   position: relative;
   height: 100vh;
   width: "100%";
+  background-color: #020223;
 }
 
 .fill_banner {
@@ -21,12 +21,12 @@
 @keyframes loopsImageanimation {
   from {
     transform: scale(2);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: scale(1);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
@@ -37,18 +37,25 @@
   bottom: 0;
   display: flex;
   flex-direction: row;
-  color: $black;
+  align-items: flex-end;
+  color: $white;
 }
 
 .infobox {
+  margin-bottom: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: .5rem !important;
+  margin-left: 0.5rem !important;
 }
 
 .lineblue {
+  height: 70vh;
+  width: 4px;
+  margin-left: 200px;
+  margin-right: 50px;
+  background-color: var(--primary-color);
   animation: lineblueanimation 0.75s ease-out 0s 1 normal;
   animation-fill-mode: both;
 }
@@ -56,18 +63,18 @@
 @keyframes lineblueanimation {
   from {
     transform: translateY(150px);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translateY(0px);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
 .title {
   font-size: 4rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   animation: titleanimation 0.75s ease-out 0.5s 1 normal;
   animation-fill-mode: both;
@@ -76,33 +83,44 @@
 @keyframes titleanimation {
   from {
     transform: translateX(50px);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translateX(0px);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
 .subtitle {
+  margin: 0;
   color: var(--primary-color);
-  font-size: 2.5rem !important;
-  font-family: 'Raleway', sans-serif !important;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 500;
   animation: subtitleanimation 0.75s ease-out 1s 1 normal;
   animation-fill-mode: both;
 }
 
+.subtitle2 {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 300;
+  color: rgba($color: $white, $alpha: 0.7);
+  animation: subtitleanimation 0.75s ease-out 1.5s 1 normal;
+  animation-fill-mode: both;
+}
 @keyframes subtitleanimation {
   from {
     transform: translateX(25px);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translateX(0px);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
@@ -114,12 +132,12 @@
 @keyframes playBlueIconanimation {
   from {
     transform: scale(0.75);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    transform: scale(1.0);
-    opacity: 1.0
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -131,12 +149,12 @@
 @keyframes titleYearanimation {
   from {
     transform: translateX(-15px);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translateX(0px);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
@@ -148,43 +166,160 @@
 @keyframes subtitleYearanimation {
   from {
     transform: translateX(-15px);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translateX(0px);
-    opacity: 1.0
+    opacity: 1;
   }
 }
 
-#menubar {
-  animation: menubaranimation 0.5s ease-out 2.5s 1 normal;
-  animation-fill-mode: both;
-}
-
-@keyframes menubaranimation {
-  from {
-    transform: translateY(-25px);
-    opacity: 0
-  }
-
-  to {
-    transform: translateY(0px);
-    opacity: 1.0
-  }
-}
-
-#scrollSubtitle {
+.scrollSubtitle {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  color: $white;
   animation: scrollSubtitleanimation 0.5s ease-out 2.5s 1 normal;
   animation-fill-mode: both;
 }
 
+.icon_arrow{
+  margin-left: 1rem;
+	transform: rotate(180deg);
+	transition: transform 0.33s ease;
+	background: url("/icons/up.svg");
+}
+
 @keyframes scrollSubtitleanimation {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1.0
+    opacity: 1;
   }
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: $white-10;
+}
+
+.col_bi {
+  flex-basis: 50%;
+  height: 70vmin;
+}
+.col_tri {
+  flex-basis: 33%;
+  height: 50vmin;
+}
+
+
+/* FOR ALL SMALL SCREENS */
+
+@media only screen and (max-width: 767.98px) {
+
+  .title{
+    font-size: 2.5rem;
+  }
+
+  .subtitle{
+    font-size: 1.5rem;
+  }
+
+  .subtitle2{
+    font-size: 0.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .scrollSubtitle{
+    font-size: 0.75rem;
+  }
+
+  .icon_arrow{
+    margin-left: 0.4rem;
+  }
+
+  .infobox{
+    margin-bottom: 10rem;
+  }
+
+  .lineblue{
+    margin-left: 12vw;
+    margin-right: 5vw;
+    height: 65%;
+  }
+
+  .col_bi {
+    flex-basis: 100%;
+    height: 70vmin;
+  }
+
+  .col_tri{
+    flex-basis: 100%;
+    height: 70vmin;
+  }
+  
+}
+
+/* MEDIUM SCREENS AT MINIMUM */
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+ 
+  .title{
+    font-size: 4rem;
+  }
+
+  .subtitle{
+    font-size: 2rem;
+  }
+
+  .subtitle2{
+    font-size: 1rem;
+  }
+
+  .infobox{
+    margin-bottom: 25vmin;
+  }
+
+  .lineblue{
+    margin-left: 10vw;
+    height: 70%;
+  }
+
+  .col_bi {
+    flex-basis: 50%;
+    height: 40vmin;
+  }
+
+  .col_tri{
+    flex-basis: 33%;
+    height: 30vmin;
+  }
+
+}
+
+/* LARGE SCREENS AT MINIMUM */
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+
+  .title{
+    font-size: 3.5rem;
+  }
+
+  .subtitle{
+    font-size: 2rem;
+  }
+
+  .subtitle2{
+    font-size: 0.7rem;
+  }
+
+  .lineblue{
+    margin-left: 10vw;
+  }
+
 }

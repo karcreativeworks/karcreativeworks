@@ -1,0 +1,123 @@
+.card_container {
+    display: block;
+    position: relative;
+}
+
+.hovering_card .hover_fadein {
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.hovering_card:hover .hover_fadein {
+    opacity: 1;
+}
+
+.hovering_card .hover_fadeout {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.hovering_card:hover .hover_fadeout {
+    opacity: 0;
+}
+
+.hovering_card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #D62238;
+    transform: scale(1, 1);
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.hovering_card:hover {
+    background-color: #fff;
+    transform: scale(0.85, 0.85);
+}
+
+.hovering_card.white-bg:hover {
+    background-color: #c0c0c0;
+    transform: scale(0.85, 0.85);
+}
+
+.card_img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba($color: $black, $alpha: 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin: 0;
+    color: $white;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    overflow-y: hidden;
+}
+
+.chips_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20%;
+    margin-top: 20px;
+}
+
+.chip {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin: 6px 6px;
+    color: $white;
+    border-radius: 4px;
+    background-color: rgba($color: $white, $alpha: 0.1);
+}
+
+
+/* FOR ALL SMALL SCREENS */
+
+@media only screen and (max-width: 767.98px) {
+
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .chips_list{
+        padding: 0 5%;
+    }
+
+    .chip{
+        font-size: 0.7rem;
+    }
+    
+  }
+  
+  /* MEDIUM SCREENS AT MINIMUM */
+  
+  @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+   
+  
+  }
+  
+  /* LARGE SCREENS AT MINIMUM */
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  
+   
+  
+  }

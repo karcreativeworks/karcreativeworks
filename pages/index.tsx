@@ -65,8 +65,7 @@ export async function getStaticProps() {
   const header = {
     title: `Subhakar Tikkireddy | Front-end Developer`,
     description: `A versatile developer with extensive experience in designing and 
-    developing both web and mobile apps, with senior level experience in 
-    React, Next.js, Typescript, React Native.`,
+    developing web and mobile apps, with React, Next.js, Typescript, React Native.`,
     url: `${FRONTEND_BASE_URL}`,
     robots: "index,follow",
     image: `${FRONTEND_BASE_URL}/images/banner.jpg`,

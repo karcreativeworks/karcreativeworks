@@ -19,7 +19,7 @@ function Layout(props: any) {
         <Header />
         <PageLoader loading={loading} color="primary" />
         {props.children}
-        {props.footer && <Footer />}
+        <Footer />
       </main>
     </div>
   );

@@ -5,126 +5,86 @@ import styles from "components/global/footer.module.scss";
 
 function Footer({}) {
   return (
-    <div className={`${styles.screen_two} ${styles.dark_bg}`}>
-      <div className={`col-10 col-md-5 col-lg-4 col-xl-3`}>
-        <img
-          className={styles.square_image}
-          src="/images/cryptostamping/screen_7.jpg"
-          alt=""
-        />
+    <div className={styles.container}>
+      <div className={styles.section_contact}>
+        <h1 className={styles.title}>Get in touch.</h1>
+        <h6 className={styles.subtitle}>
+          Want to discuss a project,collaborate or say hello? <br />
+          <a className="" href="mailto:subhakartikkireddy@gmail.com">
+            Drop me a line.
+          </a>{" "}
+          , I`&apos;d love to hear from you! {": )"}
+        </h6>
       </div>
-      <div className={`col-12 col-lg-8`}>
-        <div className={`d-block ml-4 ml-md-0 mt-3 mt-md-5 mt-lg-0`}>
-          <div
-            className={`d-flex flex-wrap align-items-start justify-content-center`}
-          >
-            <div className={`${styles.menu} col-6 col-md-3`}>
-              <h1 className={styles.headline}>About Project</h1>
-              <Link href="/how-it-works">
-                <a className={`diva ${styles.link}`}>How it Works</a>
-              </Link>
-              <Link href="/intro">
-                <a className={`diva ${styles.link}`}>Use Cases</a>
-              </Link>
-              <Link href="/roadmap">
-                <a className={`diva ${styles.link}`}>Roadmap</a>
-              </Link>
-              <Link href="/about">
-                <a className={`diva ${styles.link}`}>Team & FAQ`&aps;s</a>
-              </Link>
-            </div>
-            <div className={`${styles.menu} col-6 col-md-3`}>
-              <h1 className={styles.headline}>Products</h1>
-
+      <div className={styles.section_sitemap}>
+        <div className={styles.grid_item}>
+          <p className={styles.sitemap_subtitle}>
+            <span className={styles.head}>Subhakar Tikkireddy</span>
+            <span className={styles.sub}>© 2022, All Rights Reserved</span>
+          </p>
+        </div>
+        <div className={styles.grid_item}>
+          <p className={styles.sitemap_subtitle}>
+            <span className={styles.head}>Contact</span>
+            <a
+              href="mailto:subhakartikkireddy@gmail.com"
+              className={styles.link}
+            >
+              subhakartikkireddy@gmail.com
+            </a>
+          </p>
+        </div>
+        <div className={styles.grid_item}>
+          <div className="d-flex justify-content-between align-items-start">
+            <p className={styles.sitemap_subtitle}>
+              <span className={styles.head}>Connect</span>
               <a
-                href="https://chrome.google.com/webstore/detail/cryptostamping/dbpfclpmhfidhfbcgiaejhiebmhdgkgd"
+                href="https://github.com/karcreativeworks"
                 target="_blank"
                 rel="noreferrer"
-                className={`diva ${styles.link}`}
+                className={styles.link}
               >
-                Browser Extension
+                Github
               </a>
               <a
-                href="https://embed.cryptostamping.org"
-                className={`diva ${styles.link}`}
-              >
-                Embed Widget
-              </a>
-              <Link href="/scan">
-                <a className={`diva ${styles.link}`}>Stamp Scanner</a>
-              </Link>
-            </div>
-            <div className={`${styles.menu} col-6 col-md-3`}>
-              <h1 className={styles.headline}>For Creators</h1>
-              <Link href="/get-listed">
-                <a className={`diva ${styles.link}`}>Get Listed</a>
-              </Link>
-              <Link href="/dev-docs">
-                <a className={`diva ${styles.link}`}>Documentation</a>
-              </Link>
-              <Link href="/guide">
-                <a className={`diva ${styles.link}`}>Guidelines</a>
-              </Link>
-            </div>
-            <div className={`${styles.menu} col-6 col-md-3`}>
-              <h1 className={styles.headline}>Social Links</h1>
-              <a
-                href="https://gitcoin.co/grants/4292/cryptostamping"
+                href="https://dribbble.com/subhakartikkireddy"
                 target="_blank"
                 rel="noreferrer"
-                className={`diva ${styles.link}`}
+                className={styles.link}
               >
-                <span
-                  className={`${styles.icon} ${styles.visible} ${styles.icon_gitcoin}`}
-                />
-                Fund Project
+                Dribble
               </a>
               <a
-                href="https://github.com/cryptostamping"
+                href="https://www.toptal.com/subhakar.tikkireddy/"
                 target="_blank"
                 rel="noreferrer"
-                className={`diva ${styles.link}`}
+                className={styles.link}
               >
-                <span
-                  className={`${styles.icon} ${styles.visible} ${styles.icon_github}`}
-                />
-                Contribute
+                Toptal
               </a>
               <a
-                href="https://reddit.com/r/cryptostamping"
+                href="https://www.linkedin.com/in/subhakar-tikkireddy-93a51833"
                 target="_blank"
                 rel="noreferrer"
-                className={`diva ${styles.link}`}
+                className={styles.link}
               >
-                <span
-                  className={`${styles.icon} ${styles.visible} ${styles.icon_reddit}`}
-                />
-                Think Tank
+                Linkedin
               </a>
               <a
-                href="https://twitter.com/cutoutsnft"
+                href="https://twitter.com/karlovesfilm"
                 target="_blank"
                 rel="noreferrer"
-                className={`diva ${styles.link}`}
+                className={styles.link}
               >
-                <span
-                  className={`${styles.icon} ${styles.visible} ${styles.icon_twitter}`}
-                />
-                Updates
+                Twitter
               </a>
-              <a
-                href="https://discord.gg/XNNZ96b5V3"
-                target="_blank"
-                rel="noreferrer"
-                className={`diva ${styles.link}`}
-              >
-                <span
-                  className={`${styles.icon} ${styles.visible} ${styles.icon_discord}`}
-                />
-                Join & Talk.
-              </a>
-            </div>
+            </p>
           </div>
+        </div>
+        <div className={styles.grid_item}>
+          <a href="" className="diva">
+            <img className={styles.logo} src="/logo_gradient.png" alt="" />
+          </a>
         </div>
       </div>
     </div>

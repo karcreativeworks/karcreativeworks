@@ -41,7 +41,6 @@ const ProjectPage: NextPage<NextPageReturnProps> = ({ project }) => {
           className={styles.img_details_bg}
           src={project?.background || "/background_parallax_2.png"}
           alt=""
-          {...useImageFade()}
         />
         <div className={styles.details_container}>
           <a
@@ -57,21 +56,106 @@ const ProjectPage: NextPage<NextPageReturnProps> = ({ project }) => {
               {...useImageFade()}
             />
           </a>
-          <div className={styles.details_infobox}>
-            <h1 className={styles.details_title}>{project?.title}</h1>
-            <p className={styles.details_descr}>{project?.description}</p>
-            <span className={"border"} style={{ width: "100%" }}></span>
-            <a
-              className={`${styles.details_link} link`}
-              href={project?.redirect_link}
-              target="_blank"
-              rel="noreferrer"
+          {project && (
+            <div
+              className={`${styles.details_infobox} ${
+                "lightBackground" in project && styles.dark
+              }`}
             >
-              <span className={`${styles.icon_arrow} icon`}></span>{" "}
-              {project?.redirect_title}
-            </a>
-          </div>
+              <h1 className={styles.details_title}>{project?.title}</h1>
+              <p className={styles.details_descr}>{project?.description}</p>
+              <span className={"border"} style={{ width: "100%" }}></span>
+              <a
+                className={`${styles.details_link} link`}
+                href={project?.redirect_link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={`${styles.icon_arrow} icon`}></span>{" "}
+                {project?.redirect_title}
+              </a>
+            </div>
+          )}
         </div>
+      </div>
+      <div id="roles-tab" className={styles.section_roles}>
+        <div className={styles.roles}>
+          <p className={styles.heading}>My role</p>
+          {project?.roles.map((role) => (
+            <p key={role} className={styles.sub}>
+              {role}
+            </p>
+          ))}
+        </div>
+        <div className={styles.roles}>
+          <p className={styles.heading}>Tools used</p>
+          {project?.skills.map((skill) => (
+            <p key={skill} className={styles.sub}>
+              {skill}
+            </p>
+          ))}
+        </div>
+        <div className={styles.roles}>
+          <p className={styles.heading}>{project?.time_title}</p>
+          <p className={styles.sub}>{project?.time_subtitle}</p>
+        </div>
+      </div>
+
+      <div id="paras-tab" className={`page_container`}>
+        {project?.paragraphs?.map((para, index) => (
+          <div key={para.title} className={`page_content ${styles.parabox}`}>
+            {"title" in para && (
+              <div className={styles.para_infobox}>
+                <h1 className={styles.para_title}>{para.title}</h1>
+                <p className={styles.para_descr}>{para.description}</p>
+                <p className={styles.para_subtitle}>{para.subtitle}</p>
+              </div>
+            )}
+            <div className={styles.para_imagebox}>
+              {"image_url" in para && (
+                <img
+                  className={styles.para_image}
+                  src={para.image_url || "/logo_icon.svg"}
+                  alt=""
+                />
+              )}
+              {"box_urls" in para &&
+                para?.box_urls?.map((box_url) => {
+                  return box_url.indexOf(".mp4") > -1 ? (
+                    <video
+                      width="100%"
+                      height="100%"
+                      autoPlay
+                      muted
+                      loop
+                      className={styles.para_box_image}
+                      preload="auto"
+                      src={box_url}
+                    ></video>
+                  ) : (
+                    <img
+                      key={box_url}
+                      className={styles.para_box_image}
+                      src={box_url || "/logo_icon.svg"}
+                      alt=""
+                    />
+                  );
+                })}
+              {"video_url" in para && (
+                <video
+                  width="100%"
+                  height="100%"
+                  autoPlay
+                  muted
+                  loop
+                  className="auto-size"
+                  preload="auto"
+                  src={para?.video_url}
+                ></video>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -100,6 +184,7 @@ export async function getStaticProps({
     props: {
       header,
       project,
+      darkHeader: "darkHeader" in project,
     },
   };
 }
@@ -107,6 +192,7 @@ export async function getStaticProps({
 export async function getStaticPaths() {
   const params: any = [];
   PROJECT_PAGES.forEach((p) => {
+    console.log(p._id);
     params.push({ params: { project_id: p._id } });
   });
   console.log(params);

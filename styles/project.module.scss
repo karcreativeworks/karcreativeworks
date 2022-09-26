@@ -1,112 +1,303 @@
 .container {
-    display: block;
-  }
-  
-  .section_top {
-    display: block;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: #020223;
-    overflow: hidden;
-  }
-  
-  .img_header_bg {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    animation: loopsImageanimation 1s ease-out;
-    animation-fill-mode: both;
+  display: block;
+}
+
+.section_top {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #020223;
+  overflow: hidden;
+}
+
+.img_header_bg {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: loopsImageanimation 1s ease-out;
+  animation-fill-mode: both;
+}
+
+.section_details {
+  display: block;
+  position: relative;
+  height: 60vmin;
+}
+
+.img_details_bg {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details_container {
+  padding: 20vh 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 50%;
+}
+
+.logo_link {
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform ease 0.5s;
+}
+
+.logo_link:hover,
+.logo_link:focus,
+.logo_link:active {
+  transform: scale(1.1, 1.1);
+}
+
+.img_logo {
+  display: block;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.details_infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5rem;
+  color: $white;
+}
+
+.details_infobox.dark {
+  color: $black;
+}
+
+.details_title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+  color: inherit;
+  margin-bottom: 0;
+}
+
+.details_descr {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.15rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: inherit;
+}
+
+.details_link {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit !important;
+}
+
+.section_roles {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10vh 15vw;
+  background: $white-10;
+}
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.25rem;
+  color: $black;
+  margin-right: 10vw;
+}
+
+.roles .heading {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.roles .sub {
+  color: $grey;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.parabox {
+  position: relative;
+}
+
+.para_infobox {
+  padding: 10vh 0;
+  width: 100%;
+}
+
+.para_imagebox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.para_image {
+  flex-basis: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.para_box_image {
+  width: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.para_descr {
+  font-size: 2rem;
+  font-weight: 300;
+  max-width: 90%;
+}
+
+@keyframes loopsImageanimation {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
   }
 
-  .section_details{
-    display: block;
-    position: relative;
-    height: 60vh;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
+}
 
-  .img_details_bg{
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+/* SMALL SCREENS */
 
-  .details_container{
-    padding: 20vh 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left:0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    max-width: 60%;
-  }
-
-  .logo_link{
-    cursor: pointer;
-    transform: scale(1,1);
-    transition: transform ease 0.5s;
-  }
-
-  .logo_link:hover, .logo_link:focus, .logo_link:active{
-    transform: scale(1.1,1.1);
+@media only screen and (max-width: 767.98px) {
+  .details_container {
+    max-width: 80%;
+    padding: 10vmin 5vmin;
   }
 
   .img_logo{
-    display: block;
-    height: 8rem;
-    width: 8rem;
-    object-fit: cover;
-    object-position: center;
+    width: 4rem;
+    height: 4rem;
   }
 
   .details_infobox{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 5rem;
+    padding-left: 2rem;
   }
 
-  .details_title{
-    font-family: "Raleway", sans-serif;
-    font-size: 2.5rem;
-    color: $white;
-    margin-bottom: 0;
-  }
-
-  .details_descr{
-    font-family: "Raleway", sans-serif;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight: 300;
-    color: $white;
-  }
-
-  .details_link{
-    font-family: "Raleway", sans-serif;
+  .details_title {
     font-size: 1rem;
-    font-weight: 500;
-    color: $white !important;
   }
 
-
-  
-@keyframes loopsImageanimation {
-    from {
-      transform: scale(1.2);
-      opacity: 0;
-    }
-  
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+  .details_descr {
+    font-size: 0.5rem;
+    line-height: 0.8rem;
   }
+
+  .details_link {
+    font-size: 0.5rem;
+  }
+  .section_roles {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .roles{
+    flex-basis: 50%;
+    margin-right: 0;
+  }
+
+  .roles, .roles .sub{
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .para_infobox{
+    padding: 3rem 2rem;
+  }
+
+  .para_title{
+    font-size: 1.3rem;
+  }
+
+  .para_descr {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+
+  .para_subtitle{
+    font-size: 0.8rem;
+  }
+
+  .para_box_image {
+    width: 100%;
+  }
+}
+
+/* MEDIUM SCREENS */
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .details_container {
+    max-width: 80%;
+  }
+
+  .details_title {
+    font-size: 2rem;
+  }
+
+  .details_descr {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .details_link {
+    font-size: 1rem;
+  }
+  .section_roles {
+    padding: 10vh 10vw;
+  }
+
+  .para_descr {
+    font-size: 1.2rem;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .details_container {
+    max-width: 60%;
+  }
+
+  .details_title {
+    font-size: 2rem;
+  }
+
+  .details_descr {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .details_link {
+    font-size: 1rem;
+  }
+  .section_roles {
+    padding: 10vh 10vw;
+  }
+
+  .para_descr {
+    font-size: 1.4rem;
+  }
+}

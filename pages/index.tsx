@@ -74,6 +74,7 @@ export async function getStaticProps() {
   return {
     props: {
       header,
+      darkHeader: false,
     },
   };
 }

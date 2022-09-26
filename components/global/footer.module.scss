@@ -96,10 +96,16 @@
 		font-size: 1rem;
 	}
 
+	.grid_item{
+		flex-basis: 100%;
+		padding: 0 1.5rem;
+	}
+
 	.section_sitemap{
-		flex-wrap: wrap;
+		flex-wrap: wrap-reverse;
 		margin: 0 5%;
 		margin-top: 3rem;
+		padding-bottom: 2rem;
 	}
 
 	.sitemap_subtitle{
@@ -107,7 +113,8 @@
 	}
 
 	.sitemap_subtitle .head{
-		padding-bottom: 0.5rem;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	.sitemap_subtitle .sub,.link{
@@ -115,9 +122,6 @@
 		line-height: 1.5rem;
 	}
 
-	.grid_item{
-		flex-basis: 100%;
-	}
 }
 
 /* MEDIUM SCREENS */

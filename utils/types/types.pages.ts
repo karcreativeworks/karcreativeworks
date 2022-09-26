@@ -13,4 +13,5 @@ export interface NextPageReturnProps {
     header: PageHeader;
     project?: TYPE_PROJECT_PAGE,
     home?: TYPE_PROJECT_HOME,
+    darkHeader?: boolean
 }

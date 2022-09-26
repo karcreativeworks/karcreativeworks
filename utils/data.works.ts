@@ -129,7 +129,7 @@ export const PROJECT_HOME = {
   small_works: [
     {
       title: "Motion Graphics",
-      work_url: "/motion-graphics",
+      work_url: "/motion-graphics-2017",
       project: "Personal Projects",
       b_color: "#2b2b2b",
       snapshots: [
@@ -251,18 +251,22 @@ export const PROJECT_HOME = {
 };
 export type TYPE_PROJECT_HOME = typeof PROJECT_HOME;
 
-
 export const PROJECT_PAGES = [
   {
     _id: "tasteplore-android-app",
     title: "Tasteplore App",
     subtitle: "Trailerbase of Books.",
     b_color: "#cccccc",
-    logo_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_logo_1024.png",
-    background: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgtpl-01.jpg",
+    darkHeader: true,
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_logo_1024.png",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgtpl-01.jpg",
     main_roles: "Designer & Developer",
-    header_image: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_mobile_mockup.jpg",
-    description: "An Entertainment Explorer featuring a vivid rating style and film recommendations based on your taste.",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_mobile_mockup.jpg",
+    description:
+      "An Entertainment Explorer featuring a vivid rating style and film recommendations based on your taste.",
     roles: [
       "App Design",
       "Android App Development",
@@ -272,7 +276,8 @@ export const PROJECT_PAGES = [
       "Recommendations algorithm",
       "REST Api service",
     ],
-    redirect_link: "https://play.google.com/store/apps/details?id=com.moon.tasteplore",
+    redirect_link:
+      "https://play.google.com/store/apps/details?id=com.moon.tasteplore",
     redirect_title: "Check it on Google Play",
     time_title: "Completed",
     time_subtitle: "Aug 2017 to Jan 2018",
@@ -288,35 +293,45 @@ export const PROJECT_PAGES = [
       {
         title: "Immersive Rating experience",
         subtitle: "Illustrator, Androidx, RxJAVA, Retrofit, Dagger, RealmDb",
-        description: "A unique movie rating style that is designed to be immersive and suitable to our branding. \
+        description:
+          "A unique movie rating style that is designed to be immersive and suitable to our branding. \
                           Introduced the concept of twirling the logo for tasting a film. the experience was designed to be fun and playful. \
                           Made with a Custom rendered view and touch listeners.",
-        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/twirl_taste-01.jpg",
-        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/vivid_rating.mp4",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/twirl_taste-01.jpg",
+        video_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/vivid_rating.mp4",
       },
       {
         title: "Interactive Explorer",
         subtitle: "Illustrator, Androidx, RxJAVA, Retrofit, Dagger, RealmDb",
-        description: "Tasteplore is created with a varied number of recyclers and list view each with its own quirks. \
+        description:
+          "Tasteplore is created with a varied number of recyclers and list view each with its own quirks. \
                             The app was designed to be an explorer and the varied styles make it look always fresh \
                             Made with recycler views, sticky headers, custom adaptors pagination.",
-        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_redesign-01.jpg",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_redesign-01.jpg",
       },
       {
         title: "Dynamic Color theming",
         subtitle: "Illustrator, Androidx",
-        description: "Film details interface is built with dynamic themes based on colors extracted from movie posters. Blending in the perks of code and materiall design concepts with correct contrast values for text visibility, this is one of the best achievements in this app. Made with Pallette Extractor, androidx utils.",
+        description:
+          "Film details interface is built with dynamic themes based on colors extracted from movie posters. Blending in the perks of code and materiall design concepts with correct contrast values for text visibility, this is one of the best achievements in this app. Made with Pallette Extractor, androidx utils.",
         box_urls: [
           "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-05.jpg",
           "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp2-06.jpg",
         ],
-        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-02.jpg",
-        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/dynamic_colors.mp4",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-02.jpg",
+        video_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/dynamic_colors.mp4",
       },
       {
         title: "Back-end work.",
-        subtitle: "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk, ElasticSearch",
-        description: "Setup on a Ubuntu Droplet (VPS) in Digital Ocean, linked with an Object Storage for static uploads. \
+        subtitle:
+          "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk, ElasticSearch",
+        description:
+          "Setup on a Ubuntu Droplet (VPS) in Digital Ocean, linked with an Object Storage for static uploads. \
                             Node JS + Express + Mongodb served through a NGINX server for reverse proxy caching. \
                             New Developments include Server-Side Image Resiging(GraphicsMagick), ElasticSearch DB for best search perfomance (interlinked with mongodb and redis memcache).",
         box_urls: [
@@ -325,6 +340,449 @@ export const PROJECT_PAGES = [
         ],
       },
     ],
-  }
+  },
+  {
+    _id: "illustrations-2018",
+    title: "Illustrations",
+    subtitle: "A few motion graphic projects",
+    b_color: "#fff9de",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/small-01.jpg",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/dkncsldnc-01.jpg",
+    lightBackground: true,
+    main_roles: "Designer",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genres_mock-02.jpg",
+    description:
+      "Designed 100s of Illustrations from cross-media projects of varied types. Here are a few.",
+    roles: ["Illustrations"],
+    time_title: "Since",
+    time_subtitle: "2016",
+    skills: ["Illustrator (Design)"],
+    paragraphs: [
+      {
+        title: "Illustrations Works",
+        subtitle: "Adobe Illustrator",
+        description:
+          "A couple of Designed llustrations from cross-media freelance projects of varied types.",
+        
+    box_urls: [
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genressnap2-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genessnap%20(1).jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genressnap6-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genessnap%20(3).jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genressnap4-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/genessnap%20(2).jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap1-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap3-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap2-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap6-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap5-01.jpg",
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/peekin_snap4-01.jpg",
+    ],
+  }],
+  },
+  {
+    _id: "marinefy-android-app",
+    title: "Marinefy",
+    subtitle: "A minimal puzzle game.",
+    b_color: "#cccccc",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_512-01-01.png",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgmrn-02.jpg",
+    main_roles: "Designer & Developer",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_mobile_mockup_2.jpg",
+    description:
+      "An All-In-One Mariner's Toolkit with Ship & Port Information, Vessel Tracking, Currency Convertor, Distance & ETA Calculator.",
+    roles: [
+      "UI Design",
+      "Android App Development",
+      "Branding & Logo",
+      "Wireframing and Mockups",
+      "GPS tracking and sharing",
+      "Back-end Development",
+    ],
+    redirect_link:
+      "https://play.google.com/store/apps/details?id=com.marinefy.marinefy",
+    redirect_title: "Check it on Google Play",
+    time_title: "Completed",
+    time_subtitle: "Apr 2019 - Jun 2020",
+    skills: [
+      "Android Java",
+      "Illustrator (UI Design)",
+      "Xml",
+      "Realm DB",
+      "Dagger",
+      "Rx Java + Retrofit",
+      "Socket.Io",
+    ],
+    paragraphs: [
+      {
+        title: "Logo & Branding",
+        subtitle: "Illustrator",
+        description:
+          "The design process started With the lines representing both ship sail and letter 'M'.\
+                    With primary and background colors maintaining the brand design of app.",
+        image_url_2:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_logo_banner-01.jpg",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/ocean_clouds_2-01.jpg",
+      },
+
+      {
+        title: "Socialisation",
+        subtitle:
+          "Illustrator, androidx, Retrofit+RxJava+RealmDb, Dagger Injections",
+        description:
+          "Easy connectvity with friend suggestions from contact lists, aboard ship members. \
+Simple Home/sea icon set for instant recognition of mariner's current status. \
+Friend requests, reports and other socilisation features.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/socialisation_marinefy-01.jpg",
+      },
+      {
+        title: "GPS tracking & sharing",
+        subtitle:
+          "androidx, Google Maps API, Retrofit+RxJava+RealmDb, Dagger Injections",
+        description:
+          "View live or last updated Gps locations directly from your home page. \
+interactive switching between locations with user selection.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_gps2.jpg",
+      },
+      {
+        title: "Voyage counter & Route checker",
+        subtitle:
+          "Illustrator, androidx, Retrofit+RxJava+RealmDb, Dagger Injections",
+        description:
+          "Calculate voyage time and ETA's offline with port to port distance. \
+Check via route and related necessary information like seca or hra. \
+Timely notifications during your voyage travel. Mainatianing sea service records and total time.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_voyage-01.jpg",
+      },
+      {
+        title: "Port & Ship Info",
+        subtitle:
+          "Illustrator, androidx, Retrofit+RxJava+RealmDb, Dagger Injections",
+        description:
+          "Clean and visually appealing Interface design for detail pages of ports and ships. \
+Readable text font size with matching typesets and intutive icon set design.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/marinefy_ports-01.jpg",
+      },
+      {
+        title: "Back-end Work",
+        subtitle:
+          "Illustrator, androidx, Retrofit+RxJava+RealmDb, Dagger Injections",
+        description:
+          "Ubuntu Droplet (VPS) in Digital Ocean. Rest Api Service (Express+Node.js+Mongodb). \
+                          Reverse Proxy Caching (Nginx Server). Image Uploads (aws-sdk and multer-s3). \
+                          New Developments including working on Socket.IO for realtime chat application. \
+                          Google sign-in, GPS & AIS Ship Tracking, \
+                          Currency Convertor, Distance & ETA Calculator, Ports & Ship Info",
+      },
+    ],
+  },
+  {
+    _id: "motion-graphics-2017",
+    title: "Motion Graphics",
+    subtitle: "A few motion graphic projects",
+    b_color: "#ffffff",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/0kar-01.jpg",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/motiondslmvskm-01.jpg",
+      lightBackground: true,
+    main_roles: "Designer",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/loader_square_black_1.gif",
+    description:
+      "Some Motion Graphics Projects I've previously woked on - KAR creative works loader, Charlie Chaplin Quote, Freelance and Other - NavBharath Engineering, The Music Box & World Sufi Form.",
+    roles: ["Motion Graphics Design"],
+    time_title: "Completed",
+    time_subtitle: "2016",
+    skills: ["Illustrator (Design)", "After Effects (Animation)"],
+    paragraphs: [
+      {
+        title: "Motion Graphics Works",
+        subtitle: "Illustrator, After Effects, Cinema4d",
+        description:
+          "A couple of motion graphics works done during my college days for festivals & other activities with Adobe After Effects.",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/bod_side_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/reference.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/Re-Branding_2.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/without%20music_2.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/intro_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/without%20music_3.mp4",
+          //"https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/Re-Branding_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/verve_2.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/trailer_3.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/balls_2.mp4",
+          //"https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/mix_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/balls_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/trailer_1.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/balls_3.mp4",
+          //"https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/verve_1.mp4",
+          //"https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/LOGO2NDFIRSTLOOK_1.mp4",
+        ],
+      },
+    ],
+  },
+  {
+    _id: "sleets-android-app",
+    title: "Sleets. App",
+    subtitle: "Trailerbase of Books.",
+    b_color: "#8e2222",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/slits_500-01.jpg",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgsltslkvkmdlf-01.jpg",
+    main_roles: "Designer & Developer",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/mockup_hot_app.jpg",
+    description:
+      "A Native Android App for Reading with In-Depth Interactions (Interlinked Recyclers, Unique Parallaxed Recyclers, Day & Night Modes, Customisable Font Settings)",
+    roles: [
+      "App Design",
+      "Android App Development",
+      "Branding",
+      "Wireframing and Mockups",
+      "App Architecture",
+      "Notifications & Api",
+    ],
+    redirect_link:
+      "https://play.google.com/store/apps/details?id=com.moon.sleets",
+    redirect_title: "Check it on Google Play",
+    time_title: "Completed",
+    time_subtitle: "Feb 2019",
+    skills: [
+      "Illustrator (UI Design)",
+      "Androidx",
+      "Rx Java + Retrofit",
+      "Realm DB",
+      "Dagger",
+      "Xml",
+    ],
+    paragraphs: [
+      {
+        title: "Interactive Explorer",
+        subtitle: "Illustrator, Androidx, RxJAVA, Retrofit, Dagger, RealmDb",
+        description:
+          "The homepage is designed to be interactive with inter-linked recyclers and pop-in animations.\
+                        Floating action button's colors are auto-tuned with the respective genre to give an in-depth experience.\
+                        Basic Architecture setup includes androidx, RxJava+Retrofit+RealmDb, Dagger Injection, Broadcast Receivers for notifications.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/mocukp_app_final.jpg",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/slandart2-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/screen4.jpg",
+        ],
+      },
+      {
+        title: "Reading Experience",
+        subtitle: "Illustrator",
+        description:
+          "Developed a smooth reading experience with custom parallax scrolling of embedded images which are pre-laoded,\
+                        Progress tracking with a minimal line at top, Day and Night reading modes with customised font selection",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/slandart2-02.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/slandart2-03.jpg",
+        ],
+        video_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_reader.mp4",
+      },
+      {
+        title: "Back-end work.",
+        subtitle: "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk",
+        description:
+          "Deployed with NGINX reverse proxy caching and database management with mongodb.\
+                          REST Api service with Node.js, express, multer-s3 for file uploads and passport.js for authentication\
+                        Other added features include comment system, fast and responsive search with elastic.js.",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_ANDROIDAPP3-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_back-01.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    _id: "sleets-website",
+    title: "Sleets.",
+    subtitle: "Trailerbase of Books.",
+    b_color: "#000",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/slits_500-01.jpg",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgslts-01.jpg",
+    main_roles: "Designer, Developer & Founder",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleetsmock1920-01.jpg",
+    description:
+      "A platform that lets you share and explore teasers for your Novels / Screenplays in a new, creative format.",
+    roles: [
+      "Web Design",
+      "Branding",
+      "Wireframing and Mockups",
+      "Front-end",
+      "Database & Api",
+    ],
+    redirect_link: "https://sleets.co",
+    redirect_title: "Check out the site",
+    time_title: "Started",
+    time_subtitle: "Sep 2018",
+    skills: [
+      "Illustrator (UI Design)",
+      "Angular JS",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "Popmotion",
+      "Fabric.js",
+      "WYSWIG Editor",
+      "IndexedDB",
+    ],
+    paragraphs: [
+      {
+        title: "Logo Design",
+        subtitle: "Illustrator",
+        description:
+          "Sleets was designed to be a reading app that shows small excerpts with embedded images. Embedded images is represented with the horizontal cut, Reading is expressed with the lines and circular button at bottom right represents a mobile app. \
+        The background colors are chosen with respective to day and night modes while the primary color is chosen on the basis of highlights since generally only the best is shared.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_logodesign-02.jpg",
+      },
+      {
+        title: "Branding",
+        subtitle: "Illustrator",
+        description:
+          "The tagline was created to be engaging and relatable to writers. In context to the many drafts authors strike off before they actually launch the book, the 'Next' word is striked off.\
+        Textures and fonts are chosen with the concept of flowing and smooth since we wanted to create a seamless reading experience. Icons are designed to be simple and singular with lines.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_branding_desing2-01.jpg",
+        image_url_2:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/favreadabout-01.jpg",
+      },
+      {
+        title: "Layout Design",
+        subtitle: "Illustrator, Angular.js, HTML5, CSS, Bootstrap",
+        description:
+          "Books are always known for their wide variety. Sleets. homepage is designed to cruise through genres to explore their favorites.\
+        Creator spotlight is created to introduce users and recognise them in turn making the app more engaging. Login is designed to be simple and inviting.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/image_processing20191211-12825-pzvjyj.jpg",
+        image_url_2:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_website_scrolling-01.jpg",
+      },
+      {
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_website_fantasygenre-01.jpg",
+      },
+      {
+        title: "Reading experience",
+        subtitle:
+          "Illustrator, Angular.js, HTML5, CSS, Bootstrap, Custom Scrolling",
+        description:
+          "Aviailable in both day and night modes, sleets reader is designed for a smooth experience with custom programmed scrolling and effective image fade-ins.\
+        Reading progress is also tracked using indexedDb for next viewing.",
+        //"box_urls" :
+        //["https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/image_processing20200109-2104-1ot90ip.jpg",
+        //"https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/image_processing20200109-11882-1m0704z.jpg"]
+        image_url_2:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_website_snap-01.jpg",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_website_crow-01.jpg",
+      },
+      {
+        title: "Editor Studio",
+        subtitle: "Illustrator, Angular.js, HTML5, CSS, Fabric.js, WYSWIG",
+        description:
+          "Worked on a Angularjs SPA for writing and publishing stories. With Notifications, Mini-analytics, Image-Uploads and a minimal Medium-type WYSIWYG Editor.",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_studio-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/quotesnap5-01.jpg",
+        ],
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/sleets_editor_desing-01.jpg",
+      },
+    ],
+  },
+  {
+    _id: "stitch-android-game",
+    title: "Stitch Game",
+    subtitle: "A minimal puzzle game.",
+    b_color: "#cccccc",
+    logo_url:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch-icon_launcher-web.png",
+    background:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgstc-01.jpg",
+    main_roles: "Designer & Developer",
+    header_image:
+      "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_mockup_game-02.jpg",
+    description:
+      "A Minimal Puzzle Game that loops you though your past memories while you connect dots and complete patterns.",
+    roles: [
+      "Game Design",
+      "Android App Development",
+      "Branding & Logo",
+      "Wireframing and Mockups",
+      "Auto-generation algorithm",
+    ],
+    redirect_link:
+      "https://play.google.com/store/apps/details?id=com.moon.fireflies",
+    redirect_title: "Check it on Google Play",
+    time_title: "Update pending",
+    time_subtitle: "Feb 2018",
+    skills: [
+      "Android Java",
+      "Illustrator (UI Design)",
+      "Xml",
+      "Realm DB",
+      "Dagger",
+      "Custom-Rendered View",
+    ],
+    paragraphs: [
+      {
+        title: "Logo & Branding",
+        subtitle: "Illustrator",
+        description:
+          "Designed in black with a rich finish and zigzag textures to confuse and itentify as a puzzle game. \
+                         the texture is creted with in-game elements in varied sizes and colors introducing a minimal game atmosphere",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_dribble_logo-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_app2-01.jpg",
+        ],
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/banner_with_memories-01.jpg",
+      },
+
+      {
+        title: "Dot connecting puzzles",
+        subtitle: "Illustrator, Android JAVA, Custom Rendered View",
+        description:
+          "A Native Android Game with Custom-Rendered View in varied modes - images, colors or textures. \
+                         Algorithms to Auto-Generate Patterns with defined settings. Puzzle Sharing with encoded messages.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/patterns_stitch-01.jpg",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_game-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_app4-01.jpg",
+        ],
+      },
+      {
+        title: "Embedded Gallery",
+        subtitle: "Illustrator, Androidx, Canvas Editor",
+        description:
+          "Retrieving Pics and Albums from Storage using Content Resolver (Cursor Queries) with Dates, \
+                          Custom Image Filter Effects using Canvas Rendering.",
+        image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/memories_stitch-01.jpg",
+      },
+    ],
+  },
 ];
 export type TYPE_PROJECT_PAGE = typeof PROJECT_PAGES[0];

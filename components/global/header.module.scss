@@ -10,7 +10,7 @@
 		//box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
 	padding: 0px 25px;
 	z-index: 1000;
-	animation: menubaranimation 0.5s ease-out 2s 1 normal;
+	animation: menubaranimation 0.5s ease-out 1s 1 normal;
 	animation-fill-mode: both;
 }
   
@@ -29,6 +29,15 @@
 .logo_icon {
 	display: block;
 	background: url("/logo_plain.png");
+		width: 8rem;
+	height: 4rem;
+	background-position: center;
+	background-size: cover;
+}
+
+.logo_icon.dark{
+	display: block;
+	background: url("/logo_gradient.png");
 		width: 8rem;
 	height: 4rem;
 	background-position: center;
@@ -89,8 +98,17 @@
 	transition: border-bottom 0.33s ease;
 }
 
+.button_font.dark{
+	color: $black-8;	
+}
+
 .button_font:hover,
-.button_font:focus {
+.button_font:active {
+	color: $grey;
+}
+
+.button_font.dark:hover,
+.button_font.dark:active {
 	color: $grey;
 }
 

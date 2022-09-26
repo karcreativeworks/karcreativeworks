@@ -249,3 +249,82 @@ export const PROJECT_HOME = {
         }*/
   ],
 };
+export type TYPE_PROJECT_HOME = typeof PROJECT_HOME;
+
+
+export const PROJECT_PAGES = [
+  {
+    _id: "tasteplore-android-app",
+    title: "Tasteplore App",
+    subtitle: "Trailerbase of Books.",
+    b_color: "#cccccc",
+    logo_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_logo_1024.png",
+    background: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/pjbgtpl-01.jpg",
+    main_roles: "Designer & Developer",
+    header_image: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_mobile_mockup.jpg",
+    description: "An Entertainment Explorer featuring a vivid rating style and film recommendations based on your taste.",
+    roles: [
+      "App Design",
+      "Android App Development",
+      "Branding",
+      "Wireframing and Mockups",
+      "App Architecture",
+      "Recommendations algorithm",
+      "REST Api service",
+    ],
+    redirect_link: "https://play.google.com/store/apps/details?id=com.moon.tasteplore",
+    redirect_title: "Check it on Google Play",
+    time_title: "Completed",
+    time_subtitle: "Aug 2017 to Jan 2018",
+    skills: [
+      "Illustrator (UI Design)",
+      "Androidx",
+      "Rx Java + Retrofit",
+      "Realm DB",
+      "Dagger",
+      "Xml",
+    ],
+    paragraphs: [
+      {
+        title: "Immersive Rating experience",
+        subtitle: "Illustrator, Androidx, RxJAVA, Retrofit, Dagger, RealmDb",
+        description: "A unique movie rating style that is designed to be immersive and suitable to our branding. \
+                          Introduced the concept of twirling the logo for tasting a film. the experience was designed to be fun and playful. \
+                          Made with a Custom rendered view and touch listeners.",
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/twirl_taste-01.jpg",
+        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/vivid_rating.mp4",
+      },
+      {
+        title: "Interactive Explorer",
+        subtitle: "Illustrator, Androidx, RxJAVA, Retrofit, Dagger, RealmDb",
+        description: "Tasteplore is created with a varied number of recyclers and list view each with its own quirks. \
+                            The app was designed to be an explorer and the varied styles make it look always fresh \
+                            Made with recycler views, sticky headers, custom adaptors pagination.",
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_redesign-01.jpg",
+      },
+      {
+        title: "Dynamic Color theming",
+        subtitle: "Illustrator, Androidx",
+        description: "Film details interface is built with dynamic themes based on colors extracted from movie posters. Blending in the perks of code and materiall design concepts with correct contrast values for text visibility, this is one of the best achievements in this app. Made with Pallette Extractor, androidx utils.",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-05.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp2-06.jpg",
+        ],
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-02.jpg",
+        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/dynamic_colors.mp4",
+      },
+      {
+        title: "Back-end work.",
+        subtitle: "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk, ElasticSearch",
+        description: "Setup on a Ubuntu Droplet (VPS) in Digital Ocean, linked with an Object Storage for static uploads. \
+                            Node JS + Express + Mongodb served through a NGINX server for reverse proxy caching. \
+                            New Developments include Server-Side Image Resiging(GraphicsMagick), ElasticSearch DB for best search perfomance (interlinked with mongodb and redis memcache).",
+        box_urls: [
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_app-01.jpg",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_back-01.jpg",
+        ],
+      },
+    ],
+  }
+];
+export type TYPE_PROJECT_PAGE = typeof PROJECT_PAGES[0];

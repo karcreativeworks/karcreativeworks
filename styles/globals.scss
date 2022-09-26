@@ -222,12 +222,28 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
   display: none;
 }
 
+.border{
+  border-top: 1px solid $white;
+  opacity: 0.5;
+}
+    
+
 span.icon{
 	min-width: 1.5em;
 	min-height: 1.5em;
 	background-size: cover;
 	background-position: center;
 	filter: $f-white;
+}
+
+.link{
+  opacity: 1;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.link:hover,.link:focus,.link:active{
+  opacity: 0.75;
 }
 
 /* SMALL SCREENS */

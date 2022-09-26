@@ -192,10 +192,8 @@ export async function getStaticProps({
 export async function getStaticPaths() {
   const params: any = [];
   PROJECT_PAGES.forEach((p) => {
-    console.log(p._id);
     params.push({ params: { project_id: p._id } });
   });
-  console.log(params);
   return {
     paths: params,
     fallback: false, // can also be true or 'blocking'

@@ -5,19 +5,21 @@ import Header from "components/global/header";
 import PageLoader from "components/global/pageloader";
 import Footer from "components/global/footer";
 import { useRouter } from "next/router";
-import { PropsWithChildren, useContext, useState } from "react";
-import { pageLoaderCtx, PageLoaderProvider } from "utils/helpers.context";
+import { PropsWithChildren, useContext, useEffect, useState } from "react";
+import { appCtx, AppProvider, useAppContext } from "utils/helpers.context";
 import { NextPageReturnProps } from "utils/types/types.pages";
+import { useRouteLoader } from "utils/helpers.hooks";
 
 function Layout(props: PropsWithChildren<NextPageReturnProps>) {
   const router = useRouter();
-  const { state: loading, update: setLoading } = useContext(pageLoaderCtx);
+  const { loading, darkHeader, sendPayload } = useAppContext(appCtx);
+  useRouteLoader();
 
   return (
     <div>
       {props.header && <MetaHead header={props.header} />}
       <main className={`wrapper`}>
-        <Header darkHeader={props.darkHeader} />
+        <Header darkHeader={darkHeader} />
         <PageLoader loading={loading} color="primary" />
         {props.children}
         <Footer />
@@ -28,11 +30,11 @@ function Layout(props: PropsWithChildren<NextPageReturnProps>) {
 
 function MyApp({ Component, pageProps }: AppProps<NextPageReturnProps>) {
   return (
-    <PageLoaderProvider>
+    <AppProvider>
       <Layout {...pageProps}>
         <Component {...pageProps} />
       </Layout>
-    </PageLoaderProvider>
+    </AppProvider>
   );
 }
 

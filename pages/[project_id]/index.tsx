@@ -9,14 +9,28 @@ import type {
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { ComponentProps, PropsWithChildren, useEffect } from "react";
+import {
+  ComponentProps,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+} from "react";
 import { FRONTEND_BASE_URL } from "utils/data.constants";
 import { PROJECT_PAGES, TYPE_PROJECT_PAGE } from "utils/data.works";
 import { useImageFade, useNextImageImageFade } from "utils/helpers.hooks";
 import { NextPageReturnProps, PageHeader } from "utils/types/types.pages";
 import styles from "styles/project.module.scss";
+import { appCtx, useAppContext } from "utils/helpers.context";
 
-const ProjectPage: NextPage<NextPageReturnProps> = ({ project }) => {
+const ProjectPage: NextPage<NextPageReturnProps> = ({
+  project,
+  darkHeader,
+}) => {
+  const { sendPayload } = useAppContext(appCtx);
+  useEffect(() => {
+    sendPayload("darkHeader", darkHeader);
+  }, [darkHeader, sendPayload]);
+
   useEffect(() => {
     console.log(
       "This website is build with stack : React, Next.js, Typescript."

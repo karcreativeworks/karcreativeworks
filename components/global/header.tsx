@@ -8,13 +8,14 @@ import { NextPageReturnProps } from "utils/types/types.pages";
 function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkText, setDarkText] = useState(darkHeader);
 
   return (
     <div className={styles.header}>
       <Link href="/">
         <a className={`${styles.logo_font} ${!menuOpen ? styles.active : ""}`}>
-          <span className={`${styles.logo_icon} ${darkText && styles.dark}`} />
+          <span
+            className={`${styles.logo_icon} ${darkHeader && styles.dark}`}
+          />
         </a>
       </Link>
       <div className={`${styles.buttons} ${menuOpen ? styles.active : ""}`}>
@@ -22,7 +23,7 @@ function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
           <a
             className={`${styles.button_font} ${
               router.pathname === "/about" && styles.open
-            } ${darkText && styles.dark}`}
+            } ${darkHeader && styles.dark}`}
           >
             Background
           </a>
@@ -31,14 +32,14 @@ function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
           <a
             className={`${styles.button_font} ${
               router.pathname === "/inspiration" && styles.open
-            } ${darkText && styles.dark}`}
+            } ${darkHeader && styles.dark}`}
           >
             Inspiration
           </a>
         </Link>
         <a
           href={"mailto:subhakartikkireddy@gmail.com"}
-          className={`${styles.button_font} ${darkText && styles.dark}`}
+          className={`${styles.button_font} ${darkHeader && styles.dark}`}
         >
           Get in Touch.
         </a>
@@ -46,7 +47,7 @@ function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
           <a
             className={`${styles.button_font} ${
               router.pathname === "/start" && styles.open
-            } ${darkText && styles.dark}`}
+            } ${darkHeader && styles.dark}`}
           >
             Projects
           </a>

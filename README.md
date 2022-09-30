@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Build & Deploy Instructions
+## Build Instructions
 
 For the development mode, server starts at `https://localhost:3000`. Run the following commands.
 
@@ -19,6 +17,8 @@ npm run start
 yarn dev
 yarn start
 ```
+
+## Deploy Instructions
 
 The following is the nginx config file for server setup
 

@@ -36,32 +36,14 @@ const Home: NextPage<NextPageReturnProps> = ({ darkHeader }) => {
           <div className={styles.lineblue}></div>
           <div className={styles.infobox}>
             <h1 className={styles.title}>
-              Subhakar
-              <br />
-              Tikkireddy
+              Error - 404 <br /> page is undefined
             </h1>
-            <h6 className={styles.subtitle}>Front-end Developer</h6>
             <p className={styles.subtitle2}>
-              React | Next.js | React Native | Typescript
-            </p>
-            <p className={styles.scrollSubtitle}>
-              Projects
-              <span className={`${styles.icon_arrow} icon`} />{" "}
+              The project you&apos;re looking for may be deleted or outdated.
+              Please check the homepage to see my latest projects.
             </p>
           </div>
         </div>
-      </div>
-      <div className={styles.grid}>
-        {PROJECT_HOME.big_works.map((work, index) => (
-          <div key={work.work_url} className={styles.col_bi}>
-            <WorkCard work={work} />
-          </div>
-        ))}
-        {PROJECT_HOME.small_works.map((work, index) => (
-          <div key={work.work_url} className={styles.col_tri}>
-            <WorkCard work={work} />
-          </div>
-        ))}
       </div>
     </div>
   );
@@ -69,12 +51,10 @@ const Home: NextPage<NextPageReturnProps> = ({ darkHeader }) => {
 
 export async function getStaticProps() {
   const header = {
-    title: `Subhakar Tikkireddy | Front-end Developer`,
-    description: `A versatile developer with extensive experience in designing and 
-    developing web and mobile apps, with React, Next.js, Typescript, React Native.`,
-    url: `${FRONTEND_BASE_URL}`,
-    robots: "index,follow",
-    image: `${FRONTEND_BASE_URL}/images/banner.jpg`,
+    title: `404 - Got Lost`,
+    description: ``,
+    url: `${FRONTEND_BASE_URL}/404`,
+    robots: "noindex,nofollow",
   };
 
   return {

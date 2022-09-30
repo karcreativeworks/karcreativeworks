@@ -1,4 +1,6 @@
-import { useState, useEffect, useRef, MutableRefObject, SyntheticEvent } from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect, useRef, MutableRefObject, SyntheticEvent, useCallback } from "react";
+import { appCtx, useAppContext } from "./helpers.context";
 
 export const generateUID = () => {
   var firstPart: string | number = (Math.random() * 46656) | 0;
@@ -7,6 +9,35 @@ export const generateUID = () => {
   secondPart = ("000" + secondPart.toString(36)).slice(-3);
   return firstPart + secondPart;
 };
+
+export const useRouteLoader = () => {
+  const router = useRouter();
+  const {sendPayload} = useAppContext(appCtx);
+
+  const handleRouteChange = useCallback((url: string, { shallow }: {shallow: boolean}) => {
+    if (shallow) {
+      return;
+    }
+    sendPayload("loading",true);
+  },[sendPayload]);
+
+  const handleRouteChangeComplete = useCallback( (url: string) => {
+    sendPayload("loading",false);
+  },[sendPayload]);
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [handleRouteChange, router.events]);
+  useEffect(() => {
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+    };
+  }, [router.events,handleRouteChangeComplete]);
+}
 
 export const useImageFade = () => {
   const [style, setStyle] = useState({

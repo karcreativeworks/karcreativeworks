@@ -103,6 +103,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: inherit !important;
+  padding-top: 1.5rem;
 }
 
 .section_roles {
@@ -166,6 +167,29 @@
   font-size: 2rem;
   font-weight: 300;
   max-width: 90%;
+  white-space: pre-line;
+}
+
+.para_bulletlist{
+  margin: 4rem 0;
+  margin-left: 2rem;
+}
+
+.para_bullet{
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 70%;
+  opacity: 0.7;
+}
+
+.para_cirlce{
+  min-width: 0.5em;
+  min-height: 0.5em;
+  border-radius: 50%;
+  margin: 0.5em 0.5em;
+  background-color: $grey;
 }
 
 @keyframes loopsImageanimation {

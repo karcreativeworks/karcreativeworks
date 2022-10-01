@@ -30,7 +30,6 @@ const ProjectPage: NextPage<NextPageReturnProps> = ({
   useEffect(() => {
     sendPayload("darkHeader", darkHeader);
   }, [darkHeader, sendPayload]);
-
   useEffect(() => {
     console.log(
       "This website is build with stack : React, Next.js, Typescript."
@@ -57,19 +56,20 @@ const ProjectPage: NextPage<NextPageReturnProps> = ({
           alt=""
         />
         <div className={styles.details_container}>
-          <a
-            className={styles.logo_link}
-            href={project?.redirect_link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className={styles.img_logo}
-              src={project?.logo_url || "/logo_icon.svg"}
-              alt=""
-              {...useImageFade()}
-            />
-          </a>
+          {project?.logo_url && (
+            <a
+              className={styles.logo_link}
+              href={project?.redirect_link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={styles.img_logo}
+                src={project?.logo_url || "/logo_icon.svg"}
+                alt=""
+              />
+            </a>
+          )}
           {project && (
             <div
               className={`${styles.details_infobox} ${
@@ -123,6 +123,18 @@ const ProjectPage: NextPage<NextPageReturnProps> = ({
                 <h1 className={styles.para_title}>{para.title}</h1>
                 <p className={styles.para_descr}>{para.description}</p>
                 <p className={styles.para_subtitle}>{para.subtitle}</p>
+                {"bullets" in para && (
+                  <div className={styles.para_bulletlist}>
+                    {para.bullets?.map((bullet) => (
+                      <p
+                        key={bullet.substring(0, 8)}
+                        className={styles.para_bullet}
+                      >
+                        <span className={styles.para_cirlce}></span> {bullet}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
             <div className={styles.para_imagebox}>

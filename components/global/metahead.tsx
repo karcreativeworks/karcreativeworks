@@ -18,17 +18,16 @@ export interface HeaderProps {
 
 const MetaHead: React.FC<HeaderProps> = ({ header }) => {
   const router = useRouter();
-  const [title, setTitle] = useState(header.title);
   return (
     <Head>
-      <title>{title}</title>
+      <title>{header.title}</title>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
       <meta name="description" content={header.description} />
       <link rel="icon" href="/logo_192.png" type="image/png" />
-      {header.title && <meta property="og:title" content={title} />}
+      {header.title && <meta property="og:title" content={header.title} />}
       {header.description && (
         <meta property="og:description" content={header.description} />
       )}

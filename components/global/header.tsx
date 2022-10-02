@@ -19,16 +19,19 @@ function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
         </a>
       </Link>
       <div className={`${styles.buttons} ${menuOpen ? styles.active : ""}`}>
-        <Link href="/about">
-          <a
-            className={`${styles.button_font} ${
-              router.pathname === "/about" && styles.open
-            } ${darkHeader && styles.dark}`}
-          >
-            Background
-          </a>
-        </Link>
-        <Link href="/inspiration">
+        {/* <Link href="/about"> */}
+        <a
+          href="https://www.toptal.com/resume/subhakar-tikkireddy"
+          target="_blank"
+          rel="noreferrer"
+          className={`${styles.button_font} ${
+            router.pathname === "/about" && styles.open
+          } ${darkHeader && styles.dark}`}
+        >
+          Background
+        </a>
+        {/* </Link> */}
+        {/* <Link href="/inspiration">
           <a
             className={`${styles.button_font} ${
               router.pathname === "/inspiration" && styles.open
@@ -36,7 +39,7 @@ function Header({ darkHeader }: Omit<NextPageReturnProps, "header">) {
           >
             Inspiration
           </a>
-        </Link>
+        </Link> */}
         <a
           href={"mailto:subhakartikkireddy@gmail.com"}
           className={`${styles.button_font} ${darkHeader && styles.dark}`}

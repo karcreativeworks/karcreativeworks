@@ -55,7 +55,7 @@ function Footer({}) {
                 Dribble
               </a>
               <a
-                href="https://www.toptal.com/subhakar.tikkireddy/"
+                href="https://www.toptal.com/resume/subhakar-tikkireddy"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.link}

@@ -82,9 +82,11 @@ function Footer({}) {
           </div>
         </div>
         <div className={styles.grid_item}>
-          <a href="" className="diva">
-            <img className={styles.logo} src="/logo_gradient.png" alt="" />
-          </a>
+          <Link href="/">
+            <a className="diva">
+              <img className={styles.logo} src="/logo_gradient.png" alt="" />
+            </a>
+          </Link>
         </div>
       </div>
     </div>

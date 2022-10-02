@@ -330,20 +330,15 @@ export const PROJECT_PAGES = [
           "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-ssr-01.png",
         //video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-pagespeed.mp4",
        },
-       {
-        title: "Search Engine Optimisation (SEO).",
-        subtitle: "Generated XML Sitemaps, Robots.txt, page level SEO settings, Stuctured JSON-LD",
+       
+      {
+        title: "Trays with large lists & DOM manipulation.",
+        subtitle:
+          "React-window, DOM manipulation, Virtualising Lists",
         description:
-          "Designing SEO for bulk websites that have upto 2 million web pages is both important and complicated. For a small site, generating a sitemap would be more than enough, but for a large scale application, sitemaps are although useful,  page level SEO settings like 'robots' meta header and app level SEO setting with robots.txt define the crawler patterns.",
-          bullets: [
-            "SSR is a big help for SEO as the page is pre-rendered with all the meta-info & links, unlike client side hydration in React.",
-            "A dynamic XML sitemap is genrated through the api for all links avaialable in few of the important pages like homepage, tending, latest, genres etc..",
-            "A page level SEO setup with 'robots' metaheader defining index,follow, noindex,nofollow",
-            "An App level SEO setup for disabling crawling into unwanted routes of the application.",
-            "Structured JSON-LD for out sourcing In-App Search functionality to Google & other search engines."
-          ],
-          image_url:
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-seo-1-01.png",
+          "JingleFm as a podcast explorer required lots of items to be displayed on the same page without making the website clunkier and heavy. The solution was Virtualized lists. i.e the Podcast Trays are DOM manipulated real-time using react-window, every view that gets out of bounds in the list gets destroyed, thus maintaining a smaller memory size even for a list larger than 1000 items.",
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-screen3-01.png",
+        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-trays-drag.mp4",
       },
       {
         title: "An In-depth implementation of Search.",
@@ -353,21 +348,12 @@ export const PROJECT_PAGES = [
         bullets: [
            "A varied set of filters ranging from Release date of Podcast, Time length of Podcast, Genre, Safe Browse/Explicit Tags, and sorting modes based on popularity, release date or ranking.",
             "SWR for client side caching of search results based on the query keys. using conditional fetch & preventing waterfall chaining in some pages where a second request need to made depending on the Search Tab",
-            "Google-like Pagination Bar that adapts to the response results count.",
             "A clean Query URL for Search results page with all filters attached in query params. So that if a user copy-paste the url, then the seach will be reloaded with same filters selected.",
             "Use of shallow routing to prevent a page reload if the user is already on the search page, yet the search query in th URL changes",
             "The Instant searchbox was built with a debounced listener to the input, and the resulting instant search results are navigatable with TAB,UP,DOWN keys and selectable with ENTER key.",    
         ],
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-search-01.png",
         video_url:  "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-instantsearchbox.mp4",
-      },
-      {
-        title: "Trays with large lists & DOM manipulation.",
-        subtitle:
-          "React-window, DOM manipulation, Virtualising Lists",
-        description:
-          "JingleFm as a podcast explorer required lots of items to be displayed on the same page without making the website clunkier and heavy. The solution was Virtualized lists. i.e the Podcast Trays are DOM manipulated real-time using react-window, every view that gets out of bounds in the list gets destroyed, thus maintaining a smaller memory size even for a list larger than 1000 items.",
-        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-screen3-01.png",
-        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-trays-drag.mp4",
       },
       {
         title: "Building a custom audio player with waveforms",
@@ -388,7 +374,23 @@ export const PROJECT_PAGES = [
           
           "Delivered a responsive web app for all screen sizes (mobile, tablet, laptop, TV) and supports all modern browsers (Chrome, Firefox, Edge, Brave, and IE11)."
         ],
+        image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-devices-01-01-01.png",
         video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-ui.mp4",
+      },
+      {
+        title: "Search Engine Optimisation (SEO).",
+        subtitle: "Generated XML Sitemaps, Robots.txt, page level SEO settings, Stuctured JSON-LD",
+        description:
+          "Designing SEO for bulk websites that have upto 2 million web pages is both important and complicated. For a small site, generating a sitemap would be more than enough, but for a large scale application, sitemaps are although useful,  page level SEO settings like 'robots' meta header and app level SEO setting with robots.txt define the crawler patterns.",
+          bullets: [
+            "SSR is a big help for SEO as the page is pre-rendered with all the meta-info & links, unlike client side hydration in React.",
+            "A dynamic XML sitemap is genrated through the api for all links avaialable in few of the important pages like homepage, tending, latest, genres etc..",
+            "A page level SEO setup with 'robots' metaheader defining index,follow, noindex,nofollow",
+            "An App level SEO setup for disabling crawling into unwanted routes of the application.",
+            "Structured JSON-LD for out sourcing In-App Search functionality to Google & other search engines."
+          ],
+          image_url:
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-seo-1-01.png",
       },
       // {
       //   title: "Deploying a Next.js App in a VPN",

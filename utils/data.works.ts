@@ -122,35 +122,35 @@ export const PROJECT_HOME = {
       description:
         "A Native Android App featuring a vivid rating style, A Variety of Recyclers featuring varied styles for films, series, images, videos. Bundled with Integrated Social Signins(Google, fb, twitter)",
     },
-    {
-      title: "Stitch Android Game",
-      work_url: "/stitch-android-game",
-      work_link:
-        "https://play.google.com/store/apps/details?id=com.moon.fireflies",
-      project: "Stitch",
-      b_color: "#1a1a1a",
-      snapshots: [
-        "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB3-01.jpg",
-        "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB5-03.jpg",
-        "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB3-02.jpg",
-      ],
-      time: "Feb 2018",
-      timestamp: "2018-02",
-      tabs: ["design", "develop", "works"],
-      roles: ["Designer", "Developer"],
-      tags: [
-        "Android Java",
-        "Illustrator (UI Design)",
-        "Xml",
-        "Realm DB",
-        "Dagger",
-        "Custom-Rendered View",
-      ],
-      image_url:
-        "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_mockup_game-02.jpg",
-      description:
-        "A Native Android Game with Custom-Rendered View. Algorithms to Auto-Generate Patterns with defined settings. Puzzle Sharing with encoded messages.",
-    },
+    // {
+    //   title: "Stitch Android Game",
+    //   work_url: "/stitch-android-game",
+    //   work_link:
+    //     "https://play.google.com/store/apps/details?id=com.moon.fireflies",
+    //   project: "Stitch",
+    //   b_color: "#1a1a1a",
+    //   snapshots: [
+    //     "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB3-01.jpg",
+    //     "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB5-03.jpg",
+    //     "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stiB3-02.jpg",
+    //   ],
+    //   time: "Feb 2018",
+    //   timestamp: "2018-02",
+    //   tabs: ["design", "develop", "works"],
+    //   roles: ["Designer", "Developer"],
+    //   tags: [
+    //     "Android Java",
+    //     "Illustrator (UI Design)",
+    //     "Xml",
+    //     "Realm DB",
+    //     "Dagger",
+    //     "Custom-Rendered View",
+    //   ],
+    //   image_url:
+    //     "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/stitch_mockup_game-02.jpg",
+    //   description:
+    //     "A Native Android Game with Custom-Rendered View. Algorithms to Auto-Generate Patterns with defined settings. Puzzle Sharing with encoded messages.",
+    // },
   ],
   small_works: [
     {
@@ -328,6 +328,7 @@ export const PROJECT_PAGES = [
         ],
         image_url:
           "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-ssr-01.png",
+        //video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-pagespeed.mp4",
        },
        {
         title: "Search Engine Optimisation (SEO).",
@@ -350,15 +351,14 @@ export const PROJECT_PAGES = [
         description:
           "Search is the primary feature of this project and there were a lot of sub-requirements & sub-features within it. From the Instant Searchbox that instantly shows quick search suggestions to the Search result page with a variety of filters and In-podcast searchbox that searches all episodes of a particular podcast.",
         bullets: [
-            "The Instant searchbox was built with a debounced listener to the input, and the resulting instant search results are navigatable with TAB,UP,DOWN keys and selectable with ENTER key.",
-            "A varied set of filters ranging from Release date of Podcast, Time length of Podcast, Genre, Safe Browse/Explicit Tags, and sorting modes based on popularity, release date or ranking.",
+           "A varied set of filters ranging from Release date of Podcast, Time length of Podcast, Genre, Safe Browse/Explicit Tags, and sorting modes based on popularity, release date or ranking.",
             "SWR for client side caching of search results based on the query keys. using conditional fetch & preventing waterfall chaining in some pages where a second request need to made depending on the Search Tab",
-            "Pagination of Search results with the pagination bar at the bottom of the results similar to google.",
+            "Google-like Pagination Bar that adapts to the response results count.",
             "A clean Query URL for Search results page with all filters attached in query params. So that if a user copy-paste the url, then the seach will be reloaded with same filters selected.",
-            "Use of shallow routing to prevent a page reload if the user is already on the search page, yet the search query in th URL changes"
+            "Use of shallow routing to prevent a page reload if the user is already on the search page, yet the search query in th URL changes",
+            "The Instant searchbox was built with a debounced listener to the input, and the resulting instant search results are navigatable with TAB,UP,DOWN keys and selectable with ENTER key.",    
         ],
-        image_url:
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_redesign-01.jpg",
+        video_url:  "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-instantsearchbox.mp4",
       },
       {
         title: "Trays with large lists & DOM manipulation.",
@@ -367,47 +367,39 @@ export const PROJECT_PAGES = [
         description:
           "JingleFm as a podcast explorer required lots of items to be displayed on the same page without making the website clunkier and heavy. The solution was Virtualized lists. i.e the Podcast Trays are DOM manipulated real-time using react-window, every view that gets out of bounds in the list gets destroyed, thus maintaining a smaller memory size even for a list larger than 1000 items.",
         image_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-screen3-01.png",
+        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-trays-drag.mp4",
       },
       {
         title: "Building a custom audio player with waveforms",
-        subtitle: "Illustrator, Androidx",
+        subtitle: "HTML Canvas, Media Recorder, Capture Stream",
         description:
-          "Film details interface is built with dynamic themes based on colors extracted from movie posters. Blending in the perks of code and materiall design concepts with correct contrast values for text visibility, this is one of the best achievements in this app. Made with Pallette Extractor, androidx utils.",
-        box_urls: [
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-05.jpg",
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp2-06.jpg",
-        ],
-        image_url:
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tsp3-02.jpg",
+          "The technical requirement was the generation and rendering of waveforms on the basis of the pitch of the podcast audio. We used a mix of HTML Canvas Drawing, Media Recorder & Capture Stream. The audio stream from the podcast is captured in a blob format and analysed using AudioAnalyzer and the waveform is drawn per frame in an HTML canvas while cleaning up the previous frame draws.",
         video_url:
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/dynamic_colors.mp4",
+          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-player.mp4",
       },
       {
-        title: "A Minimalistic & Responsive UI design.",
+        title: "A Responsive & Pixel-Precise  UI.",
         subtitle:
-          "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk, ElasticSearch",
+          "Figma (UI Design), SCSS, Bootstrap",
         description:
-          "Setup on a Ubuntu Droplet (VPS) in Digital Ocean, linked with an Object Storage for static uploads. \
-                            Node JS + Express + Mongodb served through a NGINX server for reverse proxy caching. \
-                            New Developments include Server-Side Image Resiging(GraphicsMagick), ElasticSearch DB for best search perfomance (interlinked with mongodb and redis memcache).",
-        box_urls: [
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_app-01.jpg",
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_back-01.jpg",
+          "Although the UI may look and feel smooth and simple, there were many hidden criteria, that needed some extra work from the development prespective.",
+        bullets: [
+          "The dominant theme of the web app was darker shade, inspired from spotify and other podcast apps, and as always, the UI design for a dark theme is tough, as there will not be many variations for hovering actions, the greys of the app needed to be picked carefully. ",
+          
+          "Delivered a responsive web app for all screen sizes (mobile, tablet, laptop, TV) and supports all modern browsers (Chrome, Firefox, Edge, Brave, and IE11)."
         ],
+        video_url: "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/jinglefm-ui.mp4",
       },
-      {
-        title: "Deploying a Next.js App in a VPN",
-        subtitle:
-          "Nginx, Node.js, Express, Mongodb, multer-s3 & aws-sdk, ElasticSearch",
-        description:
-          "Setup on a Ubuntu Droplet (VPS) in Digital Ocean, linked with an Object Storage for static uploads. \
-                            Node JS + Express + Mongodb served through a NGINX server for reverse proxy caching. \
-                            New Developments include Server-Side Image Resiging(GraphicsMagick), ElasticSearch DB for best search perfomance (interlinked with mongodb and redis memcache).",
-        box_urls: [
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_app-01.jpg",
-          "https://tasteplore.nyc3.cdn.digitaloceanspaces.com/subhakar/tasteplore_back-01.jpg",
-        ],
-      },
+      // {
+      //   title: "Deploying a Next.js App in a VPN",
+      //   subtitle:
+      //     "Nginx, Node.js, Next.js, Docker, CI/CD",
+      //   description:
+      //     "",
+      //   box_urls: [
+      //     "",
+      //   ],
+      // },
     ],
   },
   {
